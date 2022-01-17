@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 const ResultContext = createContext();
 const baseUrl = "https://google-search3.p.rapidapi.com/api/v1";
 
-export default function ResultContextProvider() {
+export default function ResultContextProvider({ children }) {
   const [results, setResults] = useState([]); //code to set the results we aquired from the get results function
   const [searchTerm, setSearchTerm] = useState(""); //code to set and change the search Log
   const [Loading, setLoading] = useState(""); // code to set and unset the loader animation while an API call is being made
@@ -27,4 +27,12 @@ export default function ResultContextProvider() {
     setResults(processedData); //displays the processed data from the API call
     setLoading(false); //stops the loader animation
   };
+
+  return (
+    <ResultContext.Provider
+      value={{ getResults, results, searchTerm, setSearchTerm, Loading }}
+    >
+      {children}
+    </ResultContext.Provider>
+  );
 }
