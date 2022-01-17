@@ -1,7 +1,7 @@
-# GoogleClone
+# Rocketsearch.io
 
-Google search engine clone using the google clone API documentation
+A beautifull and clean search engine built using the Google API frame work
 
 ## Tech stack used:
 
-React.js, Tailwind
+React.js, Scss
