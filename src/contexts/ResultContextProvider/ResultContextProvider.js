@@ -3,7 +3,7 @@ import { createContext } from "react";
 import { useContext, useState } from "react";
 
 const ResultContext = createContext();
-const baseUrl = "https://google-search3.p.rapidapi.com/api/v1";
+const baseUrl = "https://google-search3.p.rapidapi.com/api/v1"; //API endpoint --note : Only 600 calls per month
 
 export const ResultContextProvider = ({ children }) => {
   const [results, setResults] = useState([]); //code to set the results we aquired from the get results function

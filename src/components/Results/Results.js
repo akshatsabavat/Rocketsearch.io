@@ -11,6 +11,10 @@ export default function Results() {
     useResultContext(); //constum built hook for getting result contexts
   const location = useLocation(); //ensures to store the current url extention to check the current page navigation
 
+  useEffect(() => {
+    getResults("/search/q=NBA&num=40");
+  }, []);
+
   console.log(results);
   if (Loading) return <LoadingComponent />; // gaurd clause to ensure the loader is rendered during the process of the API call
   console.log(location.pathname);
@@ -19,7 +23,7 @@ export default function Results() {
     location.pathname //switch case to changed and render the ResultContext provider depending on the url extention type
   ) {
     case "/search":
-      return "All search results displayed";
+      return <div classname="ResultsContainer"></div>;
     case "/videos":
       return "Only video results displayed";
     case "/news":
@@ -27,6 +31,6 @@ export default function Results() {
     case "/images":
       return "Only imaged results displayed";
     default:
-      return "Error";
+      return "ERROR";
   }
 }
