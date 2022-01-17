@@ -10,8 +10,8 @@ export default function Home() {
     <div className="AppPage">
       <div className="AppPage_Contents">
         <Navbar />
-        <Footer />
         <Routes />
+        <Footer />
       </div>
     </div>
   );
