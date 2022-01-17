@@ -18,6 +18,7 @@ export const ResultContextProvider = ({ children }) => {
       method: "GET",
       headers: {
         "x-user-agent": "desktop",
+        "x-proxy-location": "US",
         "x-rapidapi-host": "google-search3.p.rapidapi.com",
         "x-rapidapi-key": "7ccbf1342cmsh55f76f4c9dd164ep1daa56jsn354d0c52a70a",
       },
