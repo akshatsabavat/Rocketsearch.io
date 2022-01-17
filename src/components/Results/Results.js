@@ -23,7 +23,20 @@ export default function Results() {
     location.pathname //switch case to changed and render the ResultContext provider depending on the url extention type
   ) {
     case "/search":
-      return <div classname="ResultsContainer"></div>;
+      return (
+        <div className="ResultsContainer">
+          {results?.results?.map(({ link, title }, index) => (
+            <div key={index} className="ResultsContainer__resultItem">
+              <a href={link} target=" blank " rel="noreferrer">
+                <p className="ResultsContainer__resultItem__link">
+                  {link.lenght > 30 ? link.substring(0, 30) : link}
+                </p>
+                <p className="ResultsContainer__resultItem__title">{title}</p>
+              </a>
+            </div>
+          ))}
+        </div>
+      );
     case "/videos":
       return "Only video results displayed";
     case "/news":
