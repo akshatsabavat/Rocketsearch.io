@@ -12,6 +12,14 @@ export default function Results() {
     useResultContext(); //constum built hook for getting result contexts
   const location = useLocation();
 
+  console.log(results);
   if (Loading) return <LoadingComponent />; // gaurd clause to ensure the loader is rendered during the process of the API call
-  return <div classname="SearchResultsComponent">Results</div>;
+  console.log(location.pathname);
+
+  switch (location.pathname) {
+    case "/search":
+      return "Search";
+    default:
+      return "Error";
+  }
 }
