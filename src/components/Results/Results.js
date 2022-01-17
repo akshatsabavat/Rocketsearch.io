@@ -12,7 +12,7 @@ export default function Results() {
   const location = useLocation(); //ensures to store the current url extention to check the current page navigation
 
   useEffect(() => {
-    getResults("/search/q=NBA&num=40");
+    getResults("/search/q=NBA&num=40"); //q represents query to be searched and num represents how many searches can be returned
   }, []);
 
   console.log(results);
