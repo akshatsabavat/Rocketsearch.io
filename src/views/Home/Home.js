@@ -7,8 +7,12 @@ import { useState } from "react";
 export default function Home() {
   const [themeDark, setthemeDark] = useState(false);
   return (
-    <div>
-      <p>initial layout</p>
+    <div className="AppPage">
+      <div className="AppPage_Contents">
+        <Navbar />
+        <Footer />
+        <Routes />
+      </div>
     </div>
   );
 }
