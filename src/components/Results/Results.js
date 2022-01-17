@@ -12,8 +12,13 @@ export default function Results() {
   const location = useLocation(); //ensures to store the current url extention to check the current page navigation
 
   useEffect(() => {
+    if (searchTerm) {
+      location.pathname == "/videos"
+        ? getResults(`/search/q=${searchTerm} videos`)
+        : getResults(`${location.pathname}/1=${searchTerm}$num=40`);
+    }
     getResults("/search/q=NBA&num=40"); //q represents query to be searched and num represents how many searches can be returned
-  }, []);
+  }, [searchTerm, location.pathname]); //watches these terms for changes and sends a request to the API using the getResults() function
 
   console.log(results);
   if (Loading) return <LoadingComponent />; // gaurd clause to ensure the loader is rendered during the process of the API call
