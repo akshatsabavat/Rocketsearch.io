@@ -7,7 +7,7 @@ export default function Routes() {
     <div className="RoutingComponent">
       <Switch>
         <Route exact path="/">
-          {/* <Redirect to="/search" /> */}
+          <Redirect to="/search" />
         </Route>
         <Route path={["/search", "/images", "/news", "/videos"]}>
           <Results />
