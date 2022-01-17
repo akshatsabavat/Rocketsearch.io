@@ -36,3 +36,7 @@ export default function ResultContextProvider({ children }) {
     </ResultContext.Provider>
   );
 }
+
+export default function useResultContext(){
+    useContext(ResultContext);
+}
