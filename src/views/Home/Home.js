@@ -1,8 +1,8 @@
 import "./Home.scss";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import Routes from "../../components/Routes";
 import { useState } from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+import Routes from "../../components/Routes/Routes";
 
 export default function Home() {
   const [themeDark, setthemeDark] = useState(false);
