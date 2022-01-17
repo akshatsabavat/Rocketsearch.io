@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 const ResultContext = createContext();
 const baseUrl = "https://google-search3.p.rapidapi.com/api/v1";
 
-export default function ResultContextProvider({ children }) {
+export const ResultContextProvider = ({ children }) => {
   const [results, setResults] = useState([]); //code to set the results we aquired from the get results function
   const [searchTerm, setSearchTerm] = useState(""); //code to set and change the search Log
   const [Loading, setLoading] = useState(""); // code to set and unset the loader animation while an API call is being made
@@ -13,7 +13,7 @@ export default function ResultContextProvider({ children }) {
   const getResults = async (urlType) => {
     // the urlType here is a parameter for /videos, /news and /images
     setLoading(true); //starts the loading animation
-    const fetchResponse = await fetch(`${baseUrl}${type}`, {
+    const fetchResponse = await fetch(`${baseUrl}${urlType}`, {
       //fetches the data from the API
       method: "GET",
       headers: {
@@ -35,8 +35,6 @@ export default function ResultContextProvider({ children }) {
       {children}
     </ResultContext.Provider>
   );
-}
+};
 
-export default function useResultContext(){
-    useContext(ResultContext);
-}
+export const useResultContext = () => useContext(ResultContext);
