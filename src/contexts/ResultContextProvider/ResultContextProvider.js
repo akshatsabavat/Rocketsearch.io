@@ -7,7 +7,7 @@ const baseUrl = "https://google-search3.p.rapidapi.com/api/v1"; //API endpoint -
 
 export const ResultContextProvider = ({ children }) => {
   const [results, setResults] = useState([]); //code to set the results we aquired from the get results function
-  const [searchTerm, setSearchTerm] = useState(""); //code to set and change the search Log
+  const [searchTerm, setSearchTerm] = useState("Covid 19"); //code to set and change the search Log
   const [Loading, setLoading] = useState(""); // code to set and unset the loader animation while an API call is being made
 
   const getResults = async (urlType) => {
