@@ -1,2 +1,14 @@
+@import "../../styles/mixins";
+
 .NavigationComponent {
+  padding: 3rem;
+  @include make-flex($dir: row, $just: space-between);
+  &__Link {
+    text-decoration: none;
+
+    &__Logo {
+      font-weight: bold;
+      color: black;
+    }
+  }
 }
