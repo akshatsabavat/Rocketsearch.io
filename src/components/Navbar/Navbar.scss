@@ -5,10 +5,25 @@
   @include make-flex($dir: row, $just: space-between);
   &__Link {
     text-decoration: none;
-
-    &__Logo {
+    @include make-flex($dir: row, $just: none, $align: center);
+    gap: 13px;
+    &__LogoIcon {
+      width: 40px;
+    }
+    &__LogoTitle {
       font-weight: bold;
+      font-size: 18px;
       color: black;
+    }
+  }
+
+  &__ThemeButton {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    &:hover {
+      font-weight: 700;
     }
   }
 }
