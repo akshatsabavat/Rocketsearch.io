@@ -1,8 +1,8 @@
 @import "../../styles/mixins";
 
 .NavigationComponent {
-  padding-top: 3rem;
-  @include make-flex($dir: row, $just: space-between);
+  padding-top: 6rem;
+  @include make-flex($dir: row, $just: space-between, $align: center);
   &__Link {
     text-decoration: none;
     @include make-flex($dir: row, $just: none, $align: center);
