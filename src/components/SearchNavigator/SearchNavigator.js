@@ -24,16 +24,31 @@ export default function SearchNavigator() {
         <l1>
           <Link to={`/news`} className="SearchNavigatorComponent__Btns__Item">
             News
+            <img
+              className="SearchNavigatorComponent__Btns__Item__ItemIcon"
+              alt="NewsIcon"
+              src={NewsIcon}
+            ></img>
           </Link>
         </l1>
         <l1>
           <Link to={`/images`} className="SearchNavigatorComponent__Btns__Item">
             Images
+            <img
+              className="SearchNavigatorComponent__Bts__Item__ItemIcon"
+              alt="ImageIcon"
+              src={ImagesIcon}
+            ></img>
           </Link>
         </l1>
         <l1>
           <Link to={`/videos`} className="SearchNavigatorComponent__Btns__Item">
             Videos
+            <img
+              className="SearchNavigatorComponent__Bts__Item__ItemIcon"
+              alt="VideoIcon"
+              src={VideoIcon}
+            ></img>
           </Link>
         </l1>
       </ul>
