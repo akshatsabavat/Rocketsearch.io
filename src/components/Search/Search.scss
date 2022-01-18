@@ -6,7 +6,7 @@
     width: 330px;
     height: 35px;
     border-radius: 6px 0px 0px 6px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.75);
     padding: 1rem;
   }
   &__GoBtn {
@@ -16,7 +16,7 @@
     height: 35px;
     width: 70px;
     border-radius: 0px 6px 6px 0px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.75);
     background: #ff0000;
   }
 }

@@ -8,11 +8,11 @@
     @include make-flex($dir: row, $just: none, $align: center);
     gap: 13px;
     &__LogoIcon {
-      width: 40px;
+      width: 36px;
     }
     &__LogoTitle {
       font-weight: bold;
-      font-size: 18px;
+      font-size: 17px;
       color: black;
     }
   }
@@ -20,7 +20,7 @@
   &__ThemeButton {
     border: none;
     background: none;
-    font-size: 18px;
+    font-size: 17px;
     cursor: pointer;
     &:hover {
       font-weight: 700;
