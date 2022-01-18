@@ -25,7 +25,7 @@ export default function Results() {
   if (Loading) return <LoadingComponent />; // gaurd clause to ensure the loader is rendered during the process of the API call
   console.log(location.pathname);
 
-  //Test switchcase added to test BTN functionality
+  //Test switchcase added to test BTN's functionality
   switch (location.pathname) {
     case "/search":
       return (
