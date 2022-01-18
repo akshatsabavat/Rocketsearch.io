@@ -35,7 +35,7 @@ export default function SearchNavigator() {
           <Link to={`/images`} className="SearchNavigatorComponent__Btns__Item">
             Images
             <img
-              className="SearchNavigatorComponent__Bts__Item__ItemIcon"
+              className="SearchNavigatorComponent__Btns__Item__ItemIcon"
               alt="ImageIcon"
               src={ImagesIcon}
             ></img>
@@ -45,7 +45,7 @@ export default function SearchNavigator() {
           <Link to={`/videos`} className="SearchNavigatorComponent__Btns__Item">
             Videos
             <img
-              className="SearchNavigatorComponent__Bts__Item__ItemIcon"
+              className="SearchNavigatorComponent__Btns__Item__ItemIcon"
               alt="VideoIcon"
               src={VideoIcon}
             ></img>

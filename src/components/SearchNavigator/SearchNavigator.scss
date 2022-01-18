@@ -1,18 +1,27 @@
 @import "../../styles/mixins";
 
 .SearchNavigatorComponent {
-  background: blue;
+  // background: blue;
   position: relative;
   margin-top: 60px;
   &__Btns {
-    background: yellow;
-    max-width: 700px;
+    // background: yellow;
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
     @include make-flex($dir: row, $just: space-between);
 
     &__Item {
-      background: green;
+      // background: green;
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      @include make-flex($dir: row, $just: none, $align: center);
+      gap: 15px;
+
+      &__ItemIcon {
+        width: 30px;
+      }
     }
   }
 }
