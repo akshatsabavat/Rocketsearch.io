@@ -1,4 +1,8 @@
 import "../SearchNavigator/SearchNavigator.scss";
+import ImagesIcon from "../../Assets/ImagesIcon.svg";
+import NewsIcon from "../../Assets/NewsIcon.svg";
+import SearchIcon from "../../Assets/SearchIcon.svg";
+import VideoIcon from "../../Assets/VideoIcon.svg";
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -9,7 +13,12 @@ export default function SearchNavigator() {
       <ul className="SearchNavigatorComponent__Btns">
         <l1>
           <Link to={`/search`} className="SearchNavigatorComponent__Btns__Item">
-            All
+            All{" "}
+            <img
+              className="SearchNavigatorComponent__Btns__Item__ItemIcon"
+              alt="AllIcon"
+              src={SearchIcon}
+            ></img>
           </Link>
         </l1>
         <l1>

@@ -21,9 +21,9 @@ export default function Results() {
   //   getResults("/search/q=NBA&num=40"); //q represents query to be searched and num represents how many searches can be returned
   // }, [searchTerm, location.pathname]); //watches these terms for changes and sends a request to the API using the getResults() function
 
-  console.log(results);
-  if (Loading) return <LoadingComponent />; // gaurd clause to ensure the loader is rendered during the process of the API call
-  console.log(location.pathname);
+  // console.log(results);
+  // if (Loading) return <LoadingComponent />; // gaurd clause to ensure the loader is rendered during the process of the API call
+  // console.log(location.pathname);
 
   //Test switchcase added to test BTN's functionality
   switch (location.pathname) {
