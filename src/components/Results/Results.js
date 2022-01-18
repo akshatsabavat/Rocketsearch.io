@@ -28,29 +28,13 @@ export default function Results() {
   //Test switchcase added to test BTN's functionality
   switch (location.pathname) {
     case "/search":
-      return (
-        <div className="ResultContainer__CommonSearch">
-          All incoming search results
-        </div>
-      );
+      return <div className="ResultContainer">All incoming search results</div>;
     case "/videos":
-      return (
-        <div className="ResultContainer__VideosSearch">
-          All video search results
-        </div>
-      );
+      return <div className="ResultContainer">All video search results</div>;
     case "/images":
-      return (
-        <div className="ResultContainer__ImagesSearch">
-          All image search results
-        </div>
-      );
+      return <div className="ResultContainer">All image search results</div>;
     case "/news":
-      return (
-        <div className="ResultContainer__NewsSearch">
-          All news search results
-        </div>
-      );
+      return <div className="ResultContainer">All news search results</div>;
   }
 
   // switch (
