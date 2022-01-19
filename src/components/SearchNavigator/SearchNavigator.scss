@@ -1,12 +1,35 @@
+@import "../../styles/mixins";
+
 .SearchNavigatorComponent {
-  background: blue;
+  // background: blue;
   position: relative;
   margin-top: 60px;
   &__Btns {
-    background: yellow;
-    max-width: 700px;
+    // background: yellow;
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    @include make-flex($dir: row, $just: space-between);
+
+    &__Item {
+      // background: green;
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      @include make-flex($dir: row, $just: none, $align: center);
+      gap: 15px;
+
+      &__ItemIcon {
+        width: 30px;
+      }
+    }
+  }
+}
+
+.altItem {
+  filter: opacity(40%);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    filter: opacity(100%);
   }
 }

@@ -2,6 +2,7 @@
 
 .NavigationComponent {
   padding-top: 6rem;
+  max-width: 1140px;
   @include make-flex($dir: row, $just: space-between, $align: center);
   &__Link {
     text-decoration: none;
@@ -12,7 +13,7 @@
     }
     &__LogoTitle {
       font-weight: bold;
-      font-size: 17px;
+      font-size: 18px;
       color: black;
     }
   }
