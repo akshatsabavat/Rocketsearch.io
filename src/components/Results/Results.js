@@ -42,7 +42,7 @@ export default function Results() {
     case "/search":
       return (
         <div className="ResultsContainer">
-          {results?.results?.map(({ link, title }, index) => (
+          {results?.results?.map(({ link, title, description }, index) => (
             <div key={index} className="ResultsContainer__container">
               <a
                 className="ResultsContainer__resultItem"
@@ -54,6 +54,11 @@ export default function Results() {
                   {link.length > 30 ? link.substring(0, 30) : link}
                 </a>
                 <p className="ResultsContainer__resultItem__title">{title}</p>
+                <p className="ResultsContainer__resultItem__description hidden">
+                  {description.length > 130
+                    ? description.substring(0, 130)
+                    : description}
+                </p>
               </a>
             </div>
           ))}
