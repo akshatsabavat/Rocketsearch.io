@@ -25,3 +25,11 @@
     }
   }
 }
+
+.altItem {
+  filter: opacity(40%);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    filter: opacity(100%);
+  }
+}
