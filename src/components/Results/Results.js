@@ -43,11 +43,16 @@ export default function Results() {
       return (
         <div className="ResultsContainer">
           {results?.results?.map(({ link, title }, index) => (
-            <div key={index} className="ResultsContainer__resultItem">
-              <a href={link} target=" blank " rel="noreferrer">
-                <p className="ResultsContainer__resultItem__link">
-                  {link.lenght > 30 ? link.substring(0, 30) : link}
-                </p>
+            <div key={index} className="ResultsContainer__container">
+              <a
+                className="ResultsContainer__resultItem"
+                href={link}
+                target=" blank "
+                rel="noreferrer"
+              >
+                <a className="ResultsContainer__resultItem__link">
+                  {link.length > 30 ? link.substring(0, 30) : link}
+                </a>
                 <p className="ResultsContainer__resultItem__title">{title}</p>
               </a>
             </div>
