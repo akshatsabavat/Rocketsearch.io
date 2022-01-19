@@ -25,6 +25,7 @@ export const ResultContextProvider = ({ children }) => {
     });
 
     const processedData = await fetchResponse.json(); //process the fetched data into a JSON format
+    console.log(processedData);
     setResults(processedData); //displays the processed data from the API call
     setLoading(false); //stops the loader animation
   };
