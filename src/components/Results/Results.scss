@@ -1,6 +1,8 @@
-.ResultContainer {
+.ResultsContainer {
   padding-top: 5rem;
   max-width: 1090px;
   margin-left: auto;
   margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
