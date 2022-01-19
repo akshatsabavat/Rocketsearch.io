@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function SearchNavigator() {
-  const [btnState, setBtnState] = useState(0);
+  const [btnState, setBtnState] = useState(1);
 
   function BtnActive(tabNumber) {
     setBtnState(tabNumber);
@@ -45,11 +45,19 @@ export default function SearchNavigator() {
           <Link
             onClick={() => BtnActive(2)}
             to={`/news`}
-            className="SearchNavigatorComponent__Btns__Item altItem"
+            className={
+              btnState === 2
+                ? "SearchNavigatorComponent__Btns__Item"
+                : "SearchNavigatorComponent__Btns__Item altItem"
+            }
           >
             News
             <img
-              className="SearchNavigatorComponent__Btns__Item__ItemIcon altItem__icon"
+              className={
+                btnState === 2
+                  ? "SearchNavigatorComponent__Btns__Item__ItemIcon"
+                  : "SearchNavigatorComponent__Btns__Item__ItemIcon altItem__icon"
+              }
               alt="NewsIcon"
               src={NewsIcon}
             ></img>
@@ -59,11 +67,19 @@ export default function SearchNavigator() {
           <Link
             onClick={() => BtnActive(3)}
             to={`/images`}
-            className="SearchNavigatorComponent__Btns__Item altItem"
+            className={
+              btnState === 3
+                ? "SearchNavigatorComponent__Btns__Item"
+                : "SearchNavigatorComponent__Btns__Item altItem"
+            }
           >
             Images
             <img
-              className="SearchNavigatorComponent__Btns__Item__ItemIcon altItem__icon"
+              className={
+                btnState === 3
+                  ? "SearchNavigatorComponent__Btns__Item__ItemIcon"
+                  : "SearchNavigatorComponent__Btns__Item__ItemIcon altItem__icon"
+              }
               alt="ImageIcon"
               src={ImagesIcon}
             ></img>
@@ -73,11 +89,19 @@ export default function SearchNavigator() {
           <Link
             onClick={() => BtnActive(4)}
             to={`/videos`}
-            className="SearchNavigatorComponent__Btns__Item altItem"
+            className={
+              btnState === 4
+                ? "SearchNavigatorComponent__Btns__Item"
+                : "SearchNavigatorComponent__Btns__Item altItem"
+            }
           >
             Videos
             <img
-              className="SearchNavigatorComponent__Btns__Item__ItemIcon altItem__icon"
+              className={
+                btnState === 4
+                  ? "SearchNavigatorComponent__Btns__Item__ItemIcon"
+                  : "SearchNavigatorComponent__Btns__Item__ItemIcon altItem__icon"
+              }
               alt="VideoIcon"
               src={VideoIcon}
             ></img>
