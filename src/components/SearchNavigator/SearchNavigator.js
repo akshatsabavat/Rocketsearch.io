@@ -6,19 +6,36 @@ import VideoIcon from "../../Assets/VideoIcon.svg";
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function SearchNavigator() {
+  const [btnState, setBtnState] = useState(0);
+
+  function BtnActive(tabNumber) {
+    setBtnState(tabNumber);
+    console.log(btnState);
+  }
+
   return (
     <div className="SearchNavigatorComponent">
       <ul className="SearchNavigatorComponent__Btns">
         <l1>
           <Link
+            onClick={() => BtnActive(1)}
             to={`/search`}
-            className="SearchNavigatorComponent__Btns__Item altItem"
+            className={
+              btnState === 1
+                ? "SearchNavigatorComponent__Btns__Item"
+                : "SearchNavigatorComponent__Btns__Item altItem"
+            }
           >
             All{" "}
             <img
-              className="SearchNavigatorComponent__Btns__Item__ItemIcon altItem__icon"
+              className={
+                btnState === 1
+                  ? "SearchNavigatorComponent__Btns__Item__ItemIcon"
+                  : "SearchNavigatorComponent__Btns__Item__ItemIcon altItem__icon"
+              }
               alt="AllIcon"
               src={SearchIcon}
             ></img>
@@ -26,6 +43,7 @@ export default function SearchNavigator() {
         </l1>
         <l1>
           <Link
+            onClick={() => BtnActive(2)}
             to={`/news`}
             className="SearchNavigatorComponent__Btns__Item altItem"
           >
@@ -39,6 +57,7 @@ export default function SearchNavigator() {
         </l1>
         <l1>
           <Link
+            onClick={() => BtnActive(3)}
             to={`/images`}
             className="SearchNavigatorComponent__Btns__Item altItem"
           >
@@ -52,6 +71,7 @@ export default function SearchNavigator() {
         </l1>
         <l1>
           <Link
+            onClick={() => BtnActive(4)}
             to={`/videos`}
             className="SearchNavigatorComponent__Btns__Item altItem"
           >
