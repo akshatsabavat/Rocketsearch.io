@@ -25,6 +25,16 @@ export const ResultContextProvider = ({ children }) => {
     });
 
     const processedData = await fetchResponse.json(); //process the fetched data into a JSON format
+
+    if (type.includes("/news")) {
+      //checks the data class and sets the results variable
+      setResults(processedData.entries);
+    } else if (type.includes("/images")) {
+      setResults(processedData.image_results);
+    } else {
+      setResults(processedData.results);
+    }
+
     console.log(processedData);
     setResults(processedData); //displays the processed data from the API call
     setLoading(false); //stops the loader animation

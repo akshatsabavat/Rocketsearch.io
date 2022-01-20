@@ -7,13 +7,7 @@ import "../Results/Results.scss";
 import LoadingComponent from "../LoadingComponent/LoadingComponent";
 
 export default function Results() {
-  const {
-    results: { results, image_results, entries: news }, //object literal deconstruction to make smalled code for JSX render
-    getResults,
-    searchTerm,
-    setSearchTerm,
-    Loading,
-  } = useResultContext(); //constum built hook for getting result contexts
+  const { results, getResults, searchTerm, Loading } = useResultContext(); //constum built hook for getting result contexts
   const location = useLocation(); //ensures to store the current url extention to check the current page navigation
 
   useEffect(() => {
@@ -75,7 +69,7 @@ export default function Results() {
     case "/news":
       return (
         <div className="ResultsContainer">
-          {news?.map(({ links, id, source, title }, index) => (
+          {results?.map(({ links, id, source, title }, index) => (
             <div key={id} className="ResultsContainer__container">
               <a
                 className="ResultsContainer__resultItem"
@@ -97,7 +91,7 @@ export default function Results() {
     case "/images":
       return (
         <div className="ResultsContainer">
-          {image_results?.map(({ image, link: { href, title } }, index) => (
+          {results?.map(({ image, link: { href, title } }, index) => (
             <a
               className="ResultsContainer__imageContainer"
               href={href}
