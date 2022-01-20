@@ -65,7 +65,13 @@ export default function Results() {
         </div>
       );
     case "/videos":
-      return "Only video results displayed";
+      return (
+        <div className="ResultsContainer">
+          {results?.map((video, index) => (
+            <div key={index} className="ResultsContainer__videoContainer"></div>
+          ))}
+        </div>
+      );
     case "/news":
       return (
         <div className="ResultsContainer">
