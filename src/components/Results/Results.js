@@ -5,6 +5,7 @@ import { useResultContext } from "../../contexts/ResultContextProvider/ResultCon
 
 import "../Results/Results.scss";
 import LoadingComponent from "../LoadingComponent/LoadingComponent";
+import ReactPlayer from "react-player";
 
 export default function Results() {
   const { results, getResults, searchTerm, Loading } = useResultContext(); //constum built hook for getting result contexts
