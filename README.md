@@ -11,7 +11,7 @@ A beautifull and clean psuedo search engine built using the Google API frame wor
 For this project and like all my others i have used figma as its free and has a vast range of open source community desgin systems that I can borrow inspiration from
 
 1. LightTheme Desgin:
-   ![LightThemeDesgin](https://github.com/akshatsabavat/Rocketsearch.io/blob/9539a1ff0276ea20787fec1c4318c338e944c422/src/Assets/LightTheme.jpg)
+   ![LightThemeDesgin](https://github.com/akshatsabavat/Rocketsearch.io/blob/32b8177305abc318ffcec8af5ba43923cd1ea4a4/src/Assets/LightTheme.jpg)
 
 2. DarkTheme Desgin:
-   ![LightThemeDesgin](https://github.com/akshatsabavat/Rocketsearch.io/blob/9539a1ff0276ea20787fec1c4318c338e944c422/src/Assets/DarkTheme.jpg)
+   ![LightThemeDesgin](https://github.com/akshatsabavat/Rocketsearch.io/blob/32b8177305abc318ffcec8af5ba43923cd1ea4a4/src/Assets/DarkTheme.jpg)
