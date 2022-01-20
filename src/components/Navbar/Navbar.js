@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import EngineLogo from "../../Assets/SearchEngineIcon.svg";
 import "../Navbar/Navbar.scss";
 import Search from "../Search/Search";
-
+//branch test comment --merge requests
 export default function Navbar() {
   return (
     <div className="NavigationComponent">
