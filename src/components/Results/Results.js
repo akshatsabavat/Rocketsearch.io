@@ -16,10 +16,10 @@ export default function Results() {
       if (location.pathname === "/videos") {
         getResults(`/search/q=${searchTerm} videos`);
       } else {
-        getResults(`/${location.pathname}/q=${searchTerm}&num=40`); //q represents query to be searched and num represents how many searches can be returned
+        getResults(`${location.pathname}/q=${searchTerm}&num=40`); //q represents query to be searched and num represents how many searches can be returned
       }
     }
-  }, [searchTerm, location.pathname, getResults]); //watches these terms for changes and sends a request to the API using the getResults() function
+  }, [searchTerm, location.pathname]); //watches these terms for changes and sends a request to the API using the getResults() function
 
   console.log(results);
   if (Loading) return <LoadingComponent />; // gaurd clause to ensure the loader is rendered during the process of the API call
