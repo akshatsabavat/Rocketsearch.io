@@ -69,7 +69,31 @@ export default function Results() {
     case "/news":
       return "Only news results displayed";
     case "/images":
-      return <div className="ResultsContainer__resultItem-IMG"></div>;
+      return (
+        <div className="ResultsContainer">
+          {results?.image_results?.map(
+            ({ image, link: { href, title } }, index) => (
+              <a
+                className="ResultsContainer__imageContainer"
+                href={href}
+                key={index}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="ResultsContainer__imageContainer__image"
+                  src={image?.src}
+                  alt={title}
+                  loading="lazy"
+                />
+                <p className="ResultsContainer__imageContainer__imageName">
+                  {title}
+                </p>
+              </a>
+            )
+          )}
+        </div>
+      );
     default:
       return "ERROR";
   }
