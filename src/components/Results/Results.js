@@ -68,7 +68,27 @@ export default function Results() {
     case "/videos":
       return "Only video results displayed";
     case "/news":
-      return "Only news results displayed";
+      return (
+        <div className="ResultsContainer">
+          {results?.entries?.map(({ links, id, source, title }, index) => (
+            <div key={id} className="ResultsContainer__container">
+              <a
+                className="ResultsContainer__resultItem"
+                href={links?.[0].href}
+                target=" blank "
+                rel="noreferrer"
+              >
+                <p className="ResultsContainer__resultItem__title">{title}</p>
+                <div>
+                  <a src={source?.href} target=" blank " rel="noreferrer">
+                    {source?.href}
+                  </a>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      );
     case "/images":
       return (
         <div className="ResultsContainer">
