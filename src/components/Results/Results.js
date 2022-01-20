@@ -69,7 +69,14 @@ export default function Results() {
       return (
         <div className="ResultsContainer">
           {results?.map((video, index) => (
-            <div key={index} className="ResultsContainer__videoContainer"></div>
+            <div key={index} className="ResultsContainer__videoContainer">
+              <ReactPlayer
+                url={video.additional_links?.[0].href}
+                controls
+                width="355px"
+                hieght="200px"
+              />
+            </div>
           ))}
         </div>
       );
