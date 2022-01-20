@@ -7,8 +7,13 @@ import "../Results/Results.scss";
 import LoadingComponent from "../LoadingComponent/LoadingComponent";
 
 export default function Results() {
-  const { getResults, results, searchTerm, setSearchTerm, Loading } =
-    useResultContext(); //constum built hook for getting result contexts
+  const {
+    results: { results, image_results, entries: news }, //object literal deconstruction to make smalled code for JSX render
+    getResults,
+    searchTerm,
+    setSearchTerm,
+    Loading,
+  } = useResultContext(); //constum built hook for getting result contexts
   const location = useLocation(); //ensures to store the current url extention to check the current page navigation
 
   useEffect(() => {
@@ -43,7 +48,7 @@ export default function Results() {
     case "/search":
       return (
         <div className="ResultsContainer">
-          {results?.results?.map(({ link, title, description }, index) => (
+          {results?.map(({ link, title, description }, index) => (
             <div key={index} className="ResultsContainer__container">
               <a
                 className="ResultsContainer__resultItem"
@@ -70,7 +75,7 @@ export default function Results() {
     case "/news":
       return (
         <div className="ResultsContainer">
-          {results?.entries?.map(({ links, id, source, title }, index) => (
+          {news?.map(({ links, id, source, title }, index) => (
             <div key={id} className="ResultsContainer__container">
               <a
                 className="ResultsContainer__resultItem"
@@ -92,27 +97,25 @@ export default function Results() {
     case "/images":
       return (
         <div className="ResultsContainer">
-          {results?.image_results?.map(
-            ({ image, link: { href, title } }, index) => (
-              <a
-                className="ResultsContainer__imageContainer"
-                href={href}
-                key={index}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="ResultsContainer__imageContainer__image"
-                  src={image?.src}
-                  alt={title}
-                  loading="lazy"
-                />
-                <p className="ResultsContainer__imageContainer__imageName">
-                  {title}
-                </p>
-              </a>
-            )
-          )}
+          {image_results?.map(({ image, link: { href, title } }, index) => (
+            <a
+              className="ResultsContainer__imageContainer"
+              href={href}
+              key={index}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="ResultsContainer__imageContainer__image"
+                src={image?.src}
+                alt={title}
+                loading="lazy"
+              />
+              <p className="ResultsContainer__imageContainer__imageName">
+                {title}
+              </p>
+            </a>
+          ))}
         </div>
       );
     default:
