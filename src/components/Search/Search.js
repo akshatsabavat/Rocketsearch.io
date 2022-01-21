@@ -1,15 +1,17 @@
 import React from "react";
-import { useEffect } from "react";
 import { useState } from "react";
+import { useResultContext } from "../../contexts/ResultContextProvider/ResultContextProvider";
 import "../Search/Search.scss";
 
 export default function Search() {
+  const { setSearchTerm, searchTerm } = useResultContext();
   const [searchValue, setSearchValue] = useState("");
   const [buttonState, setButtonState] = useState(0);
 
   function beginSearch(event) {
     setSearchValue(event.target.value);
-    alert(searchValue);
+    setSearchTerm(searchValue);
+    console.log(searchTerm);
   }
   return (
     <div className="SearchComponent">
