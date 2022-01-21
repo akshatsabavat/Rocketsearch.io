@@ -1,0 +1,26 @@
+@import "../../styles/mixins";
+
+.SearchComponent {
+  @include make-flex($dir: row, $just: none, $align: center);
+  &__InputFeild {
+    width: 330px;
+    height: 35px;
+    border-radius: 6px 0px 0px 6px;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    padding: 1rem;
+  }
+  &__GoBtn {
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    height: 35px;
+    width: 100px;
+    border-radius: 0px 6px 6px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    background: #ff0000;
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -1,14 +1,29 @@
 @import "../../styles/mixins";
 
 .NavigationComponent {
-  padding-top: 3rem;
-  @include make-flex($dir: row, $just: space-between);
+  padding-top: 6rem;
+  @include make-flex($dir: row, $just: space-between, $align: center);
   &__Link {
     text-decoration: none;
-
-    &__Logo {
+    @include make-flex($dir: row, $just: none, $align: center);
+    gap: 13px;
+    &__LogoIcon {
+      width: 36px;
+    }
+    &__LogoTitle {
       font-weight: bold;
+      font-size: 18px;
       color: black;
+    }
+  }
+
+  &__ThemeButton {
+    border: none;
+    background: none;
+    font-size: 17px;
+    cursor: pointer;
+    &:hover {
+      font-weight: 700;
     }
   }
 }
