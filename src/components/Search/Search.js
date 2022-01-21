@@ -6,26 +6,23 @@ import { useDebounce } from "use-debounce"; //gives a certain time limit till a 
 import "../Search/Search.scss";
 
 export default function Search() {
-  const [userIP, setuserIP] = useState("Covid 19");
+  const [userIP, setuserIP] = useState("");
   const [goBtn, setGoBtn] = useState(false);
   const { setSearchTerm } = useResultContext();
-  const [debounceValue] = useDebounce(userIP, 500); // waits for 500ms and then processes the useIP state feild
-  const [searchDebounceValue] = useDebounce(userIP, goBtn);
+  const [debounceValue] = useDebounce(userIP, 300); // waits for 500ms and then processes the useIP state feild
+
+  let finalSearchValue = "";
+
   function turnSearchOn() {
-    setGoBtn(true);
-    console.log(goBtn);
+    goBtn === true ? setSearchTerm(false) : setSearchTerm(true);
+    setSearchTerm(userIP);
+    console.log(userIP);
   }
   useEffect(() => {
-    if (debounceValue) {
-      setSearchTerm(debounceValue);
-      console.log(userIP);
+    if (debounceValue && goBtn) {
+      finalSearchValue = debounceValue;
     }
-  }, [debounceValue]); //if any changes in debounce value updates the useResultcontext hook feild setSearch Term
-
-  useEffect(() => {
-    goBtn === true ? setGoBtn(false) : setGoBtn(true);
-    console.log();
-  }, [goBtn]);
+  }, [debounceValue, goBtn]); //if any changes in debounce value updates the useResultcontext hook feild setSearch Term
   return (
     <div className="SearchComponent">
       <input
