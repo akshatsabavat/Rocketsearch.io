@@ -2,6 +2,8 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Results from "../Results/Results";
 
+//Code restart
+
 export default function Routes() {
   return (
     <div className="RoutingComponent">
